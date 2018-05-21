@@ -1,0 +1,81 @@
+.about{
+    float: right;
+    width: rem(700px);
+    @extend %clearfix;
+
+    @include laptop{
+        width:36.75rem;
+    }
+
+    @include tablet{
+        width:48.928rem;
+        float: left;
+    }
+
+    @include phone{
+        float: none;
+        width: 100%;
+    }
+};
+
+.about__left{
+    float: left;
+    width: rem(320px);
+    text-align: center;
+
+    @include laptop{
+        width:17rem;
+    }
+
+    @include tablet{
+        width:16.286rem;
+    }
+
+    @include phone{
+        float: none;
+        width: 100%;
+    }
+}
+
+.about__right{
+    float: right;
+    width: rem(360px);
+
+    @include laptop{
+        width:19.5rem;
+    }
+
+    @include tablet{
+        width:31.5rem;
+    }
+
+    @include phone{
+        float: none;
+        width: 100%;
+    }
+}
+
+.about__pic-block{
+    display: inline-block;
+    height: rem(210px);
+    width: rem(210px);
+    overflow: hidden;
+    @include border-radius(50%);
+    border: rem(5px) solid #fff;
+}
+
+.about__pic{
+    height: rem(210px);
+}
+
+.about__description{
+    color: #646464;
+    height: rem(310px);
+    overflow-y: scroll;
+    font-size: rem(18px);
+}
+
+.about__download{
+    text-align: right;
+    margin-top: rem(50px);
+}

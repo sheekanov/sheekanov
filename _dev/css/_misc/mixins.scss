@@ -1,0 +1,71 @@
+//mixins
+
+@mixin box-shadow($param){
+    box-shadow: $param;
+    -moz-box-shadow: $param;
+    -webkit-box-shadow: $param;
+}
+
+@mixin border-radius($param){
+    border-radius: $param;
+    -webkit-border-radious: $param;
+    -moz-border-radius: $param;
+}
+
+@mixin transition($param){
+    transition: $param;
+    -webkit-transition: $param;
+    -o-transition: $param;
+    -moz-transition: $param;
+}
+
+@mixin transform($param){
+    transform: $param;
+    -ms-transform: $param;
+    -webkit-transform: $param;
+    -o-transform: $param;
+    -moz-transform: $param;
+}
+
+//placeholders
+
+%clearfix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//adaptive
+@function rem($param){
+    $value: $param/16px + 0rem;
+
+    @return $value;
+}
+
+@mixin desktop{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablet {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phone {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}

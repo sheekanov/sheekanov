@@ -1,0 +1,42 @@
+.footer .container{
+    height: 100%;
+}
+
+.footer__left, .footer__right{
+    width: 50%;
+    float: left;
+    height: 100%;
+
+    &::before{
+        content:"";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    @include phone{
+        width: 100%;
+        height: 50%;
+        float: none;
+    }
+}
+
+.footer__right{
+    text-align: right;
+
+    @include phone{
+        text-align: center;
+    }
+}
+
+.footer__copyright{
+    color: #9c9c9c;
+    font-size: rem(14px);
+    display: inline-block;
+    vertical-align: middle;
+
+    @include phone{
+        text-align: center;
+    }
+}
+

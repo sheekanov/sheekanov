@@ -1,0 +1,11 @@
+.page-title{
+    @include fira(medium);
+    font-size: rem(35px);
+    line-height: 1.1;
+    margin-bottom: rem(0px);
+    margin-top: rem(0px);
+}
+
+.page-title--margin_25px{
+    margin-bottom: rem(25px);
+}

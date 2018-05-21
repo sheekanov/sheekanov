@@ -1,0 +1,37 @@
+.name{
+    font-size: 0;
+}
+
+.name__link{
+    display: block;
+    text-decoration: none;
+}
+
+.name__avatar{
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: $lightgrey;
+    height: rem(58px);
+    width: rem(58px);
+    overflow: hidden;
+    @include border-radius(50%);
+}
+
+.name__avatar-pic{
+    height: rem(58px);
+}
+
+.name__text{
+    font-weight: normal;
+    line-height: 1.55;
+    vertical-align: middle;
+    font-size: rem(18px);
+    margin-left: rem(20px);
+    color: $black;
+    display: inline-block;
+
+    @include phone{
+        width: 100px;
+    }
+}

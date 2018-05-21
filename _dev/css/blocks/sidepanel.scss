@@ -1,0 +1,10 @@
+.sidepanel{
+    float: left;
+    width: rem(220px);
+    
+    @include tablet{
+        float:none;
+        width: auto;
+        margin-bottom: 2.857rem;
+    }
+}

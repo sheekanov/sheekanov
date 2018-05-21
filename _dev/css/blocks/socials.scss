@@ -1,0 +1,38 @@
+.socials{
+    display: inline-block;
+}
+
+.socials__item{
+    display: inline-block;
+    margin: 0 rem(2px);
+}
+
+.socials__link{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    @include border-radius(50%);
+    background-image: url("../assets/pic/decor/socials-sprite.png");
+    background-position-y: bottom;
+
+    &:hover{
+        background-position-y: top;
+    }
+}
+
+$socs: fb, vk, twi;
+
+@each $soc in $socs{
+    .socials__link--#{$soc}{
+        @if $soc == vk {
+            background-position-x: -50px;
+        }
+        @else if $soc == twi {
+            background-position-x: -100px;
+        }
+        @else {
+            background-position-x: 0px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.portfolio{
+    float: right;
+    width: rem(700px);
+
+    @include laptop{
+        width: 35.75rem;
+    }
+
+    @include tablet{
+        float: none;
+        width: 100%;
+    }
+};
+
+.portfolio__list{
+    font-size: 0;
+    margin-left: rem(-9px);
+
+    @include phone{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.portfolio__item{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    font-size: rem(14px);
+    width: 33.33%;
+    padding: 0 rem(9px) rem(20px) rem(9px);
+
+    @include phone{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        padding-bottom: rem(20px);
+    }
+}
+
+.portfolio__block{
+    width: 100%;
+    @include border-radius(rem(7px));
+    overflow: hidden;
+    background: #fff;
+    @include box-shadow(0px 1px 3px rgba(#000, 0.2));
+    @include transition(0.3s);
+
+    &:hover{
+        @include box-shadow(0px 4px 8px rgba(#000, 0.2)); 
+
+        .portfolio__title{
+            color: $red;
+        }
+    }
+    
+}
+
+.portfolio__link{
+    text-decoration: none;
+}
+
+.portfolio__pic-block{
+    height: rem(170px);
+    width: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+}
+
+.portfolio__pic-fake{
+    position: absolute;
+    left: -9999px;
+}
+
+.portfolio__text-block{
+    padding: rem(16px)  rem(18px); 
+}
+
+.portfolio__title{
+    color: $blue;
+    font-size: rem(21px);
+    line-height: rem(24px);
+    @include fira(regular);
+    padding-bottom: rem(3px);
+}
+
+.portfolio__desc{
+    @include fira(light);
+    font-size: rem(14px);
+    color: $black;
+    line-height: rem(21px);
+    padding-bottom: rem(5px);
+}
+
+.portfolio__type{
+    color: #aeaeae;
+    font-size: rem(14px);
+    @include fira(bold);
+
+}
+
+.portfolio__icon{
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-size: rem(18px);
+    margin-right: rem(5px);
+}

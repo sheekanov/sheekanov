@@ -1,0 +1,306 @@
+.career{
+    float: right;
+    width: rem(700px);
+    @extend %clearfix;
+
+    @include laptop{
+        width: 34.75rem;
+    }
+
+    @include tablet{
+        float:none;
+        width: 100%;
+    }
+};
+
+$pic-size: rem(220px);
+
+.career__left{
+    float:left;
+    width: $pic-size;
+    height: $pic-size;
+    position: relative;
+
+    @include laptop{
+        width: 10.75rem;
+        height: 10.75rem;
+    }
+
+    @include tablet{
+        width: rem(220px);
+        height: 15.285rem;
+    }
+
+    @include phone{
+        width: 100%;
+        float: none;
+        margin-bottom: rem(30px);
+        height: 16.285rem;
+    }
+}
+
+.career__right{
+    float:right;
+    width: rem(460px);
+
+    @include laptop{
+        width: 23.75rem;
+    }
+
+    @include tablet{
+        width: rem(600px);
+    }
+
+    @include phone{
+        width: 100%;
+        float: none;
+    }
+}
+
+.career__pic-block{
+    width: $pic-size;
+    height: $pic-size;
+    @include border-radius(rem(5px));
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    opacity: 0;
+    @include transition(opacity 0.3s);
+
+    @include laptop{
+        width: 10.75rem;
+        height: 10.75rem;
+    }
+
+    @include tablet{
+        width: 15.285rem;
+        height: 15.285rem;
+    }
+
+    @include phone{
+        width: 16.285rem;
+        height: 16.285rem;
+    }
+}
+
+.career__pic-block--active{
+    left: 0;
+    opacity: 1;
+
+    @include phone{
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+}
+
+.career__pic-fake{
+    position: absolute;
+    left: -9999px;
+}
+
+.career__list{
+    text-align: right;
+}
+
+$career-block-margin: rem(20px);
+$round-diametr: rem(20px);
+
+.career__list-item{
+    display: inline-block;
+    cursor: pointer;
+    width: rem(380px);
+    position: relative;
+
+    @include laptop{
+        width: 18.75rem;
+    }
+
+    @include tablet{
+        width: rem(500px);
+    }
+
+    @include phone{
+        width: 100%;
+    }
+
+    &:before, &:after{
+        content:"";
+        display: block;
+        width: 1px;
+        background-color: #dddddd;
+        position: absolute;
+        right: 100%;
+        margin-right: rem(20px);
+
+        @include phone{
+            display: none;
+        }
+    }
+
+    
+
+    &:before{
+        bottom: 0;
+        top: 50%;
+        margin-top: -$career-block-margin/2+$round-diametr/2;
+
+    }
+
+    &:after{
+        top: 0;
+        bottom: 50%;
+        margin-bottom: $career-block-margin/2+$round-diametr/2;
+    }
+
+    &:first-child{
+        &:after{
+            display: none;
+        }
+    }
+
+    &:last-child{
+        &:before{
+            display: none;
+        }
+    }
+}
+
+.career__block{
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    @include border-radius(rem(10px));
+    border: 1px solid #f0f0f0;
+    margin-bottom: $career-block-margin;
+    position: relative;
+    padding: rem(16px) rem(18px);
+    box-sizing: border-box;
+    @include box-shadow(0px 1px 3px rgba(0,0,0,0.2));
+    @include transition(0.3s);
+
+    &:hover{
+        
+        background-color: $blue;
+        color: #fff;
+
+        &:after{
+            background-color: #94e0f2;
+        }
+
+        .career__year{
+            @include fira(bold);
+            font-size: rem(18px);
+            color: $blue;
+
+            @include laptop{
+                font-size: rem(14px);
+            }
+
+            @include tablet{
+                font-size: rem(18px);
+            }
+            
+        }
+    }
+
+    &:before{
+        content:"";
+        display: block;
+        height: $round-diametr/2;
+        width: $round-diametr/2;
+        @include border-radius(50%);
+        background-color: $blue;
+        position: absolute;
+        right: 100%;
+        margin-right: rem(16px);
+        top: 50%;
+        margin-top: -$career-block-margin/2 +$round-diametr/4;
+        z-index: 2;
+        @include phone{
+            display: none;
+        }
+    }
+
+    &:after{
+        content:"";
+        display: block;
+        height: $round-diametr;
+        width: $round-diametr;
+        @include border-radius(50%);
+        background-color: transparent;
+        position: absolute;
+        right: 100%;
+        margin-right: rem(11px);
+        top: 50%;
+        margin-top: -$career-block-margin/2;
+        @include phone{
+            display: none;
+        }
+    }
+}
+
+.career__title{
+    @include fira(regular);
+    font-size: rem(21px);
+    line-height: 1.24;
+
+    @include laptop{
+        font-size: rem(19px);
+    }
+
+    @include tablet{
+        font-size: rem(21px);
+    }
+
+}
+
+.career__occupation{
+    font-size: rem(18px);
+
+    @include laptop{
+        font-size: rem(16px);
+    }
+
+    @include tablet{
+        font-size: rem(18px);
+    }
+
+}
+
+.career__dates{
+    font-size: rem(18px);
+    @include laptop{
+        font-size: rem(16px);
+    }
+
+    @include tablet{
+        font-size: rem(18px);
+    }
+}
+
+.career__year{
+    position: absolute;
+    font-size: rem(14px);
+    line-height: rem(26px);
+    right: 100%;
+    margin-right: rem(40px);
+    top: 50%;
+    margin-top: rem(-13px);
+
+    @include laptop{
+        font-size: rem(12px);
+    }
+
+    @include tablet{
+        font-size: rem(14px);
+    }
+
+    @include phone{
+        display: none;
+    }
+
+}

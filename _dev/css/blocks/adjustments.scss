@@ -1,0 +1,95 @@
+//vars
+$footer-height: rem(50px);
+$container-width: 940px;
+
+// adjustment styles
+
+li {
+	list-style: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+html{
+	font-size: 16px;
+
+	@include desktop{
+		font-size: 16px;
+	}
+
+	@include laptop{
+		font-size: 15px;
+	}
+
+	@include tablet{
+		font-size: 14px;
+	}
+
+	@include phone{
+		font-size: 13px;
+	}
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	line-height: 1.44;
+	-webkit-font-smoothing: antialiased;
+	background: $white;
+	@include fira(light);
+	color: $black;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.wrapper:after {
+	content: "";
+	display: block;
+	height: $footer-height;
+	overflow: hidden;
+}
+
+.container {
+	width: $container-width;
+	margin: 0 auto;
+	@extend %clearfix;
+
+	@include laptop{
+		width: 760px;
+	}
+
+	@include tablet{
+		width: 728px;
+	}
+
+	@include phone{
+		width: 300px;
+	}
+
+}
+
+footer {
+	height: $footer-height;
+	width: 100%; 
+	margin-top: -$footer-height;
+	position: relative;
+	background-color: $black;
+	
+	@include phone{
+		height: $footer-height * 2;
+	}
+}

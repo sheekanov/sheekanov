@@ -1,0 +1,79 @@
+.hello-wrap{
+    height: 100%;
+    background-color: $white;
+    text-align: center;
+
+    &:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+}
+
+.hello{
+    background-color: $white;
+    width: rem(300px);
+    @include border-radius(rem(10px));
+    @include box-shadow(0px 1px 2px rgba(#000, 0.3));
+    display: inline-block;
+    vertical-align: middle;
+}
+
+$pic-size: rem(142px);
+
+.hello__pic-section{
+    height: $pic-size/2;
+    position: relative;
+}
+
+.hello__pic-block{
+    height: $pic-size - rem(4px);
+    width: $pic-size - rem(4px);
+    @include border-radius(50%);
+    border: 2px solid #bebebe;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -$pic-size/2;
+    overflow: hidden;
+}
+
+.hello__pic{
+    max-width: $pic-size - rem(4px);
+    max-height: $pic-size - rem(4px);
+}
+
+.hello__name-section{
+    padding: rem(15px) rem(60px);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    word-spacing: rem(100px);
+}
+
+.hello__button-section{
+    background: $blue;
+    padding: rem(20px) rem(80px);
+    @include border-radius(0 0 rem(10px) rem(10px));
+}
+
+.hello__button{
+    display: block;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    @include fira(bold);
+    font-size: rem(14px);
+    line-height: rem(36px);
+    vertical-align: middle;
+    text-align: center;
+    @include border-radius(rem(20px));
+    @include transition(0.3s);
+
+    &:hover{
+        background: #fff;
+        color: $blue;
+    }
+}
+
+

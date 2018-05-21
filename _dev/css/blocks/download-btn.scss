@@ -1,0 +1,22 @@
+.download-btn{
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $red;
+    border: solid 2px $red;
+    @include border-radius(20px);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: rem(14px);
+    padding: rem(10px) rem(13px);
+
+    &:hover{
+        background-color: $red;
+        color: $white;
+    }
+}  
+
+.download-btn__icon{
+    font-family: 'FontAwesome';
+    margin-right: rem(10px);
+}
