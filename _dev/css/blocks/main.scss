@@ -1,0 +1,14 @@
+.main{
+    float: right;
+    width: rem(700px);
+    @extend %clearfix;
+
+    @include laptop{
+        width: 35.75rem;
+    }
+
+    @include tablet{
+        float: none;
+        width: 100%;
+    }
+}

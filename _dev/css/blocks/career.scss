@@ -1,18 +1,3 @@
-.career{
-    float: right;
-    width: rem(700px);
-    @extend %clearfix;
-
-    @include laptop{
-        width: 34.75rem;
-    }
-
-    @include tablet{
-        float:none;
-        width: 100%;
-    }
-};
-
 $pic-size: rem(220px);
 
 .career__left{
