@@ -21,6 +21,10 @@
     }
 }
 
+.socials__item--hidden{
+    display: none;
+}
+
 $socs: fb, vk, twi;
 
 @each $soc in $socs{
