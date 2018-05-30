@@ -48,12 +48,17 @@
 }
 
 .portfolio__pic-block{
-    height: rem(170px);
+    height: 170px;
     width: 100%;
     overflow: hidden;
     background-position: center center;
     background-size: cover;
+
+    @include phone{
+        height: 185px;
+    }
 }
+
 
 .portfolio__pic-fake{
     position: absolute;
