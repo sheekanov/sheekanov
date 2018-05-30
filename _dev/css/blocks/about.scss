@@ -50,8 +50,8 @@
 
 .about__description{
     color: #646464;
-    height: rem(310px);
-    overflow-y: scroll;
+    max-height: rem(310px);
+    overflow-y: auto;
     font-size: rem(18px);
 }
 

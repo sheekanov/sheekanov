@@ -4,6 +4,10 @@
     line-height: 1.1;
     margin-bottom: rem(0px);
     margin-top: rem(0px);
+
+    @include phone{
+        text-align: center;
+    }
 }
 
 .page-title--margin_25px{
