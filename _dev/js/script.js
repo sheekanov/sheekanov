@@ -10,15 +10,4 @@ $(document).ready(function(){
         $('.career__pic-block').eq(cnt).addClass('career__pic-block--active');
     })
     }());
-
-    //фиксация выпадашки в контактах при нажатии
-    (function(){
-        var contacts = document.querySelector(".contacts");
-
-        contacts.addEventListener('click', function(){
-            contacts.classList.toggle("contacts--active");
-});
-
-    }())
-    
 })
