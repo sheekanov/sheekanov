@@ -170,6 +170,7 @@ $round-diametr: rem(20px);
     &:hover{
         
         background-color: $blue;
+        border-color: $blue;
         color: #fff;
 
         &:after{
